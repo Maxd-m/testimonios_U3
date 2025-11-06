@@ -1,0 +1,21 @@
+:root{
+  --bg: #f7f7fbd2;
+  --card: #fff;
+  --accent: #4f46e5;
+  --muted: #666;
+}
+
+h1, h3{
+  color: cadetblue;
+}
+
+body { font-family: Inter, system-ui, sans-serif; background: var(--bg); margin:0; padding:40px; display:flex; justify-content:center; }
+.app { width: 420px; text-align:center; }
+.testimonial-card { background:var(--card); padding:24px; border-radius:12px; box-shadow: 0 6px 18px rgba(20,20,50,0.08); }
+.testimonial-photo { width:90px; height:90px; border-radius:50%; object-fit:cover; margin-bottom:12px; }
+.testimonial-name { margin:6px 0 0; }
+.testimonial-role { color:var(--muted); font-size:0.9rem; margin:6px 0 12px; }
+.testimonial-text { font-style:italic; line-height:1.5; color:#222; }
+.controls { margin-top:16px; display:flex; gap:10px; justify-content:center; }
+.controls button { border: none; padding:8px 12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
+.counter { color:var(--muted); margin-top:8px; font-size:0.9rem; }
