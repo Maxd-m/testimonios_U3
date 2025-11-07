@@ -17,6 +17,7 @@ Incluye navegación **anterior**, **siguiente**, **aleatoria** y un **autoplay**
 ---
 
 ## 🧩 Estructura del proyecto
+```
 src/
 ├── assets/
 │ ├── react.svg
@@ -28,7 +29,7 @@ src/
 ├── App.jsx # Componente principal con la lógica del carrusel
 ├── App.css # Estilos básicos
 └── main.jsx # Punto de entrada de React
-
+```
 ---
 
 ## 💻 Interfaz
