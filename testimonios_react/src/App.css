@@ -6,16 +6,84 @@
 }
 
 h1, h3{
-  color: cadetblue;
+  color:#222;
 }
 
 body { font-family: Inter, system-ui, sans-serif; background: var(--bg); margin:0; padding:40px; display:flex; justify-content:center; }
 .app { width: 420px; text-align:center; }
-.testimonial-card { background:var(--card); padding:24px; border-radius:12px; box-shadow: 0 6px 18px rgba(20,20,50,0.08); }
-.testimonial-photo { width:90px; height:90px; border-radius:50%; object-fit:cover; margin-bottom:12px; }
 .testimonial-name { margin:6px 0 0; }
 .testimonial-role { color:var(--muted); font-size:0.9rem; margin:6px 0 12px; }
 .testimonial-text { font-style:italic; line-height:1.5; color:#222; }
 .controls { margin-top:16px; display:flex; gap:10px; justify-content:center; }
 .controls button { border: none; padding:8px 12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); }
-.counter { color:var(--muted); margin-top:8px; font-size:0.9rem; }
+.counter { color:var(--muted); margin-top:8px; font-size:0.9rem; color: #222; font-weight: 700; }
+
+
+/* --- Contenedor principal --- */
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  display: block;          /* 👈 elimina flex, evita distorsión horizontal */
+  margin: 0 auto;          /* 👈 centra horizontalmente */
+  box-sizing: border-box;  /* 👈 evita cambio de tamaño por padding */
+}
+
+/* --- Motion div (el que contiene cada testimonio) --- */
+.card-wrapper > div {
+  position: absolute;      /* 👈 asegura que las tarjetas no influyan en el layout */
+  top: 0;
+  left: 0;
+  width: 100%;             /* 👈 garantiza que mantenga el mismo ancho */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 👈 centra el contenido */
+}
+
+/* --- Asegurar que la tarjeta no se deforme --- */
+.testimonial-card {
+  width: 100%;             /* 👈 ocupa todo el ancho disponible del contenedor */
+  height: auto;
+  box-sizing: border-box;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* --- Elimina márgenes que puedan afectar el centrado --- */
+.testimonial-photo {
+  margin: 0 auto 12px auto;
+  display: block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  /* --- Nuevo fondo degradado animado --- */
+  background: linear-gradient(-45deg, #4f46e5, #06b6d4, #a78bfa, #f472b6);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+}
+
+/* --- Animación del fondo --- */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

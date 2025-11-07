@@ -29,4 +29,7 @@ src/
 ├── App.css # Estilos básicos
 └── main.jsx # Punto de entrada de React
 
+---
 
+## 💻 Interfaz
+![Vista previa de la app](./testimonios_react/src/assets/image.png)

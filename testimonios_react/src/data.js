@@ -32,16 +32,16 @@ const testimonios = [
   },
   {
     id: 5,
-    nombre: "Sofía Ramírez",
-    cargo: "Emprendedora",
+    nombre: "Javier Ortega",
+    cargo: "Emprendedor",
     texto:
       "Desde que empecé a usarlo, mi negocio creció más rápido de lo que imaginaba.",
     foto: "https://i.pravatar.cc/150?img=56",
   },
   {
     id: 6,
-    nombre: "Javier Ortega",
-    cargo: "Desarrollador Full Stack",
+    nombre: "Sofía Ramírez",
+    cargo: "Desarrolladora Full Stack",
     texto:
       "La integración fue sencilla y el soporte técnico excelente. ¡Superó mis expectativas!",
     foto: "https://i.pravatar.cc/150?img=27",
@@ -53,7 +53,7 @@ const testimonios = [
     texto:
       "Nos ayudó a organizar mejor los proyectos y aumentar la productividad del equipo.",
     foto: "https://i.pravatar.cc/150?img=39",
-  }
+  },
 ];
 
 export default testimonios;
